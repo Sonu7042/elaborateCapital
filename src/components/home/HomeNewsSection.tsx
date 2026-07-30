@@ -102,7 +102,9 @@ export default function HomeNewsSection() {
                   <h3 className="text-2xl font-bold text-white flex items-center gap-2">
                     Live News
                     <button
+                      type="button"
                       onClick={handleRefresh}
+                      aria-label="Refresh live news"
                       className={`text-[#99C336] hover:text-[#bef264] transition-all transform ${refreshing ? "animate-spin" : "hover:rotate-180"}`}
                     >
                       <RefreshCw size={24} />

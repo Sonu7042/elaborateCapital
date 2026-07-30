@@ -104,6 +104,7 @@ const Footer = () => {
               <div className="flex gap-4">
                 <a
                   href="https://www.facebook.com"
+                  aria-label="Elaborate Capital on Facebook"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform text-white hover:text-[#99C336]"
@@ -112,6 +113,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.linkedin.com"
+                  aria-label="Elaborate Capital on LinkedIn"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform text-white hover:text-[#99C336]"
@@ -120,6 +122,7 @@ const Footer = () => {
                 </a>
                 <a
                   href="https://www.instagram.com"
+                  aria-label="Elaborate Capital on Instagram"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:scale-110 transition-transform text-white hover:text-[#99C336]"
@@ -264,7 +267,10 @@ const Footer = () => {
           </span>
           <div className="w-full border-b border-dashed border-white h-0 mt-1"></div>
           <button
+            type="button"
             onClick={() => setShowDisclaimer(!showDisclaimer)}
+            aria-label={showDisclaimer ? "Hide disclaimer" : "Show disclaimer"}
+            aria-expanded={showDisclaimer}
             className={`shrink-0 w-10 h-10 bg-[#2d3a2d] border border-white/20 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-300 z-10 ${showDisclaimer ? "rotate-45" : ""
               }`}
           >

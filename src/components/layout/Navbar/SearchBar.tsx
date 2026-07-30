@@ -63,7 +63,9 @@ const SearchBar: React.FC = () => {
         <div ref={searchRef} className="relative">
             {/* Mobile Search Trigger Icon */}
             <button
+                type="button"
                 onClick={() => setIsMobileOpen(true)}
+                aria-label="Open search"
                 className="lg:hidden p-2 text-gray-700 hover:text-[#3b30ad] transition-colors"
             >
                 <Search className="h-6 w-6" />
@@ -77,6 +79,7 @@ const SearchBar: React.FC = () => {
                     </div>
                     <input
                         type="text"
+                        aria-label="Search tools and news"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                         onKeyDown={handleKeyDown}
@@ -87,7 +90,9 @@ const SearchBar: React.FC = () => {
                     />
                     {query && (
                         <button
+                            type="button"
                             onClick={() => setQuery("")}
+                            aria-label="Clear search"
                             className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
                         >
                             <X size={14} />
@@ -153,23 +158,31 @@ const SearchBar: React.FC = () => {
                             {/* Mobile Header */}
                             <div className="flex items-center gap-4 mb-6">
                                 <button
+                                    type="button"
                                     onClick={() => setIsMobileOpen(false)}
+                                    aria-label="Close search"
                                     className="p-2 -ml-2 text-gray-500"
                                 >
                                     <ArrowRight className="h-6 w-6 rotate-180" />
                                 </button>
                                 <div className="flex-1 relative">
                                     <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
-                                    <input
-                                        autoFocus
-                                        type="text"
+                                <input
+                                    autoFocus
+                                    type="text"
+                                    aria-label="Search tools and news"
                                         value={query}
                                         onChange={(e) => setQuery(e.target.value)}
                                         placeholder="Search with Elaborate Capital..."
                                         className="w-full pl-10 pr-4 py-3 bg-gray-100 border-none rounded-xl text-lg font-medium outline-none focus:ring-2 focus:ring-[#3b30ad]/10"
                                     />
                                     {query && (
-                                        <button onClick={() => setQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400">
+                                        <button
+                                            type="button"
+                                            onClick={() => setQuery("")}
+                                            aria-label="Clear search"
+                                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+                                        >
                                             <X size={20} />
                                         </button>
                                     )}

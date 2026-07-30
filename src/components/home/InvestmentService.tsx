@@ -33,22 +33,21 @@ const InvestmentService = () => {
               </div>
             </button> */}
 
-            <button
+            <Link
+              to="/about"
               className="relative mt-5 p-[2px] rounded-full hover:cursor-pointer
                     bg-linear-to-r from-[#7ECA9C] via-[#0D3052] to-red-500 
                     bg-size-[200%_100%]
-                    hover:shadow-lg active:scale-95 transition-all"
+                    hover:shadow-lg active:scale-95 transition-all inline-block"
               style={{
                 animation: "borderRun 4s linear infinite",
               }}
             >
-              <Link to="/about">
-                <div className="px-8 py-2.5 rounded-full bg-white">
-                  <span className="text-gray-900 heading font-medium text-sm">
-                    More About Us
-                  </span>
-                </div>
-              </Link>
+              <div className="px-8 py-2.5 rounded-full bg-white">
+                <span className="text-gray-900 heading font-medium text-sm">
+                  More About Us
+                </span>
+              </div>
 
               <style>
                 {`
@@ -58,7 +57,7 @@ const InvestmentService = () => {
                       }
                     `}
               </style>
-            </button>
+            </Link>
           </motion.div>
 
           {/* Right Image */}

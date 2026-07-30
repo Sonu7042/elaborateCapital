@@ -66,6 +66,8 @@ const AutoCarousel: React.FC = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
+            aria-hidden={index !== current}
+            {...(index !== current ? { inert: true } : {})}
             className={`absolute w-full transition-all duration-700 ease-in-out ${index === current
               ? "opacity-100 translate-x-0 z-10 pointer-events-auto"
               : "opacity-0 translate-x-10 z-0 pointer-events-none"
@@ -113,11 +115,18 @@ const AutoCarousel: React.FC = () => {
         ))}
 
         {/* DOTS */}
-        <div className="absolute bottom-6 flex gap-3">
-          {slides.map((_, index) => (
+        <div
+          className="absolute bottom-6 flex gap-3 z-20"
+          role="group"
+          aria-label="Select carousel slide"
+        >
+          {slides.map((slide, index) => (
             <button
               key={index}
+              type="button"
               onClick={() => setCurrent(index)}
+              aria-label={`Show slide ${index + 1}: ${slide.title}`}
+              aria-pressed={current === index}
               className={`w-3 h-3 rounded-full transition-all ${current === index ? "bg-[#99C336] w-6" : "bg-gray-300"
                 }`}
             />

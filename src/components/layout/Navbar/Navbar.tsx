@@ -166,7 +166,10 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               <SearchBar />
             </div>
             <button
+              type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isMobileMenuOpen}
               className="inline-flex items-center justify-center p-2 rounded-xl text-gray-700 hover:text-[#3b30ad] hover:bg-gray-100 focus:outline-none transition-all duration-200"
             >
               {isMobileMenuOpen ? (

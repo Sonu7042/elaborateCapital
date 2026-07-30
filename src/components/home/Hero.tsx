@@ -48,10 +48,8 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5"
         >
-          <a
-            href="https://wa.me/919990105522"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact"
             className="relative mt-0 p-[2px] rounded-full hover:cursor-pointer
             bg-linear-to-r from-[#7ECA9C] via-[#0D3052] to-red-500 
             bg-size-[200%_100%]
@@ -61,11 +59,9 @@ const Hero = () => {
             }}
           >
             <div className="px-8 py-2.5 rounded-full bg-white">
-              <Link to="/contact">
-                <span className="text-gray-900 font-medium text-sm">
-                  Connect Today
-                </span>
-              </Link>
+              <span className="text-gray-900 font-medium text-sm">
+                Connect Today
+              </span>
             </div>
 
             <style>
@@ -76,12 +72,15 @@ const Hero = () => {
                   }
                 `}
             </style>
-          </a>
+          </Link>
 
-          <Link to="https://wa.me/919990105522" target="_blank">
-            <button className="px-10 py-3 rounded-full cursor-pointer bg-[#1c1c1c] text-white font-medium transition-all hover:bg-black hover:shadow-lg active:scale-95">
-              Talk to Advisor
-            </button>
+          <Link
+            to="https://wa.me/919990105522"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-10 py-3 rounded-full cursor-pointer bg-[#1c1c1c] text-white font-medium transition-all hover:bg-black hover:shadow-lg active:scale-95"
+          >
+            Talk to Advisor
           </Link>
         </motion.div>
 

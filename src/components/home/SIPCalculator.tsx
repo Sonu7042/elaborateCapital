@@ -37,6 +37,7 @@ const Slider = ({
         <div className="flex items-center gap-1 bg-white px-3 py-1 rounded-xl border border-gray-100 shadow-sm focus-within:border-[#99C336] transition-all">
           <input
             type="number"
+            aria-label={`${label} value`}
             value={value === 0 ? "" : value}
             placeholder="0"
             onChange={(e) => {
@@ -53,6 +54,7 @@ const Slider = ({
       <div className="relative h-1.5 flex items-center">
         <input
           type="range"
+          aria-label={label}
           min={min}
           max={max}
           step={step}
@@ -147,6 +149,7 @@ const OutputSection = ({
             <div className="flex items-center">
               <input
                 type="number"
+                aria-label="Estimated returns percentage"
                 value={
                   Math.round(returnsPercent) === 0
                     ? ""
@@ -274,6 +277,7 @@ const SIPCalc = () => {
               </span>
               <input
                 type="number"
+                aria-label="Investment amount"
                 value={amount === 0 ? "" : amount}
                 placeholder="0"
                 onChange={(e) => setAmount(Number(e.target.value))}
@@ -353,6 +357,7 @@ const LumpsumCalc = () => {
               </span>
               <input
                 type="number"
+                aria-label="Investment amount"
                 value={amount === 0 ? "" : amount}
                 placeholder="0"
                 onChange={(e) => setAmount(Number(e.target.value))}
@@ -530,6 +535,7 @@ const GoalCalc = () => {
               </span>
               <input
                 type="number"
+                aria-label="Target amount"
                 value={target === 0 ? "" : target}
                 placeholder="0"
                 onChange={(e) => setTarget(Number(e.target.value))}
@@ -749,11 +755,18 @@ export default function CalculatorsSection() {
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex gap-8 border-b border-gray-100 overflow-x-auto whitespace-nowrap scrollbar-hide mb-6">
+        <div
+          className="flex gap-8 border-b border-gray-100 overflow-x-auto whitespace-nowrap scrollbar-hide mb-6"
+          role="tablist"
+          aria-label="Financial calculators"
+        >
           {TABS.map((tab) => (
             <button
               key={tab.key}
+              type="button"
               onClick={() => setActiveTab(tab.key)}
+              role="tab"
+              aria-selected={activeTab === tab.key}
               className={`pb-4 text-[12px] font-bold tracking-widest uppercase transition-all relative font-primary ${
                 activeTab === tab.key
                   ? "text-[#99C336]"

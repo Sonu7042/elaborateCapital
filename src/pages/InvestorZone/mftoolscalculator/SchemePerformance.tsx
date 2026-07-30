@@ -23,6 +23,7 @@ const SchemePerformance = () => {
               src="https://www.investwell.in/updation/parameter/par_mfperform_schsort.jsp?&amp;ht=ffffff&amp;hbg=013974&amp;bt=000000&amp;r1=dddddd&amp;r2=f2f2f2"
               width="100%"
               height="680"
+              loading="lazy"
               frameBorder="0"
               scrolling="no"
               title="Scheme Performance Tool"

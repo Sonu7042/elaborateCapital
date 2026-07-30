@@ -15,7 +15,7 @@ const ServicesSection = lazy(
   () => import("../../components/home/ServicesSection"),
 );
 const SIPCalculator = lazy(
-  () => import("../../components/home/SIPCalculator"),
+  () => import("../../components/home/SIPCalculator"),                                       
 );
 const WhyChooseSection = lazy(
   () => import("../../components/home/WhyChooseSection"),

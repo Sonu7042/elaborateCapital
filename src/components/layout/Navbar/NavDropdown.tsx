@@ -18,7 +18,11 @@ const NavDropdown: React.FC<NavDropdownProps> = ({ item }) => {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
-            <button className="flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-[#3b30ad] transition-colors py-3">
+            <button
+                type="button"
+                aria-expanded={isOpen}
+                className="flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-[#3b30ad] transition-colors py-3"
+            >
                 {item.title}
                 <ChevronDown className={`w-4 h-4 text-gray-400 group-hover:text-[#3b30ad] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
