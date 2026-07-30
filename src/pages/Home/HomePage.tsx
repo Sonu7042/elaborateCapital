@@ -1,34 +1,49 @@
+import { lazy, Suspense } from "react";
 import Hero from "../../components/home/Hero";
 import StatsSection from "../../components/home/StatsSection";
-import ServicesSection from "../../components/home/ServicesSection";
 // import FinancialGoalsSection from "../../components/home/FinancialGoalsSection";
-import AutoCarousel from "../../components/home/AutoCarousel";
-import PartnerLogos from "../../components/home/PartnerLogos";
 // import TestimonialSection from "../../components/home/TestimonialSection";
 // import Partners from "../../components/home/Partners";
-import SchemePerformance from "../InvestorZone/mftoolscalculator/SchemePerformance";
 // import IPOWidget from "../InvestorZone/IpoPage";
-import HomeNewsSection from "../../components/home/HomeNewsSection";
-import InvestmentService from "../../components/home/InvestmentService";
 // import IpoList from '../../components/home/IpoList';
 
-import WhyChooseSection from "../../components/home/WhyChooseSection";
-import SIPCalculator from "../../components/home/SIPCalculator";
+const InvestmentService = lazy(
+  () => import("../../components/home/InvestmentService"),
+);
+const PartnerLogos = lazy(() => import("../../components/home/PartnerLogos"));
+const ServicesSection = lazy(
+  () => import("../../components/home/ServicesSection"),
+);
+const SIPCalculator = lazy(
+  () => import("../../components/home/SIPCalculator"),
+);
+const WhyChooseSection = lazy(
+  () => import("../../components/home/WhyChooseSection"),
+);
+const AutoCarousel = lazy(() => import("../../components/home/AutoCarousel"));
+const SchemePerformance = lazy(
+  () => import("../InvestorZone/mftoolscalculator/SchemePerformance"),
+);
+const HomeNewsSection = lazy(
+  () => import("../../components/home/HomeNewsSection"),
+);
 
 const HomePage = () => {
   return (
     <main className="min-h-screen">
       <Hero />
       <StatsSection />
-      <InvestmentService />
-      <PartnerLogos />
-      <ServicesSection />
-      {/* <FinancialGoalsSection /> */}
-      <SIPCalculator />
-      <WhyChooseSection />
-      <AutoCarousel />
-      <SchemePerformance />
-      <HomeNewsSection />
+      <Suspense fallback={null}>
+        <InvestmentService />
+        <PartnerLogos />
+        <ServicesSection />
+        {/* <FinancialGoalsSection /> */}
+        <SIPCalculator />
+        <WhyChooseSection />
+        <AutoCarousel />
+        <SchemePerformance />
+        <HomeNewsSection />
+      </Suspense>
       {/* <Partners /> */}
       {/* <IpoList /> */}
       {/* <div className="p-10 bg-gray-50 min-h-screen">
@@ -44,6 +59,7 @@ const HomePage = () => {
             className="w-full h-full"
             src="https://www.youtube.com/embed/kBfbSs7VbXc?si=-R89xXwZ3EhrOkdP"
             title="YouTube video player"
+            loading="lazy"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -51,7 +67,6 @@ const HomePage = () => {
           ></iframe>
         </div>
       </div>
-      
     </main>
   );
 };
