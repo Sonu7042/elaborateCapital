@@ -194,7 +194,7 @@ export default function StockNews({ limit }: StockNewsProps) {
                   </h2>
 
                   {/* Summary */}
-                  <p className="text-sm text-gray-700 line-clamp-3 mb-6">
+                  <p className="text-sm text-black line-clamp-3 mb-6">
                     {item.summary}
                   </p>
 
