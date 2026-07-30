@@ -100,7 +100,7 @@ const Contact = () => {
               <div className="flex justify-start mt-2">
                 <button
                   type="submit"
-                  className="bg-[#99C336] cursor-pointer  text-white heading font-semibold text-[15px] px-10 py-3 rounded-full transition-all duration-300  active:scale-95"
+                  className="bg-[#99C336] cursor-pointer text-black heading font-semibold text-[15px] px-10 py-3 rounded-full transition-all duration-300 active:scale-95"
                 >
                   Send
                 </button>

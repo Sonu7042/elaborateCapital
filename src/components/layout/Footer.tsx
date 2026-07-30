@@ -41,9 +41,9 @@ const Footer = () => {
           {/* Quick Link Column */}
           <div className="flex flex-col gap-10">
             <div>
-              <h3 className="text-lg heading font-bold mb-6 text-white opacity-90">
+              <h2 className="text-lg heading font-bold mb-6 text-white opacity-90">
                 Quick Link
-              </h3>
+              </h2>
               <ul className="flex flex-col para gap-5">
                 <li>
                   <Link
@@ -98,9 +98,9 @@ const Footer = () => {
 
             {/* Contact Us (Social) Section */}
             <div>
-              <h3 className="text-lg heading font-bold mb-4 text-white opacity-90">
+              <h2 className="text-lg heading font-bold mb-4 text-white opacity-90">
                 Contact Us
-              </h3>
+              </h2>
               <div className="flex gap-4">
                 <a
                   href="https://www.facebook.com"
@@ -135,9 +135,9 @@ const Footer = () => {
 
           {/* Our Services Column */}
           <div>
-            <h3 className="text-lg heading font-bold mb-6 text-white opacity-90">
+            <h2 className="text-lg heading font-bold mb-6 text-white opacity-90">
               Our Services
-            </h3>
+            </h2>
             <ul className="flex flex-col para gap-5">
               <li>
                 <Link
@@ -189,9 +189,9 @@ const Footer = () => {
 
           {/* Get In Touch Column */}
           <div>
-            <h3 className="text-lg heading font-bold mb-6 text-white opacity-90">
+            <h2 className="text-lg heading font-bold mb-6 text-white opacity-90">
               Get In Touch
-            </h3>
+            </h2>
             <ul className="flex flex-col para gap-5">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin size={20} className="shrink-0 mt-0.5 text-white" />
