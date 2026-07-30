@@ -99,9 +99,9 @@ const TaxationPage = () => {
                     </svg>
                   </div>
 
-                  <h3 className="font-semibold heading text-lg mb-2">
+                  <h2 className="font-semibold heading text-lg mb-2">
                     {service.title}
-                  </h3>
+                  </h2>
 
                   <p className="text-gray-500 para text-sm">{service.desc}</p>
                 </Link>
