@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +11,7 @@ interface NavDropdownProps {
 
 const NavDropdown: React.FC<NavDropdownProps> = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const menuId = useId();
 
     return (
         <div
@@ -21,6 +22,9 @@ const NavDropdown: React.FC<NavDropdownProps> = ({ item }) => {
             <button
                 type="button"
                 aria-expanded={isOpen}
+                aria-controls={menuId}
+                onClick={() => setIsOpen((open) => !open)}
+                onFocus={() => setIsOpen(true)}
                 className="flex items-center gap-1 text-[15px] font-medium text-gray-700 hover:text-[#3b30ad] transition-colors py-3"
             >
                 {item.title}
@@ -31,6 +35,7 @@ const NavDropdown: React.FC<NavDropdownProps> = ({ item }) => {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
+                            id={menuId}
                             initial={{ opacity: 0, y: 15 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 15 }}

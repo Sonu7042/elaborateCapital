@@ -103,22 +103,20 @@ const Partners = () => {
                             
                         </motion.button> */}
             {/* <div className="px-8 py-2.5 rounded-full bg-white"><span className="text-gray-900 font-medium text-sm">See more</span></div> */}
-            <Link to="/partner">
+            <Link
+              to="/partner"
+              className="relative mt-5 p-[2px] rounded-full hover:cursor-pointer
+                    bg-gradient-to-r from-[#7ECA9C] via-[#0D3052] to-red-500
+                    bg-[length:200%_100%]
+                    hover:shadow-lg active:scale-95 transition-all"
+              style={{ animation: "borderRun 4s linear infinite" }}
+            >
               {/* <button className=" hover:cursor-pointer group p-[1.5px] rounded-full mt-5 bg-linear-to-r from-red-500 to-green-500  transition-all active:scale-95">
                             <div className="px-8 py-2.5 rounded-full bg-white   transition-colors">
                                 <span className="text-black font-semibold  text-sm tracking-wide"></span>
                             </div>
 
                         </button> */}
-              <button
-                className="relative mt-5 p-[2px] rounded-full hover:cursor-pointer
-                    bg-gradient-to-r from-[#7ECA9C] via-[#0D3052] to-red-500 
-                    bg-[length:200%_100%]
-                    hover:shadow-lg active:scale-95 transition-all"
-                style={{
-                  animation: "borderRun 4s linear infinite",
-                }}
-              >
                 <div className="px-8 py-2.5 rounded-full bg-white">
                   <span className="text-gray-900 font-medium text-sm">
                     Click Here
@@ -133,7 +131,6 @@ const Partners = () => {
                       }
                     `}
                 </style>
-              </button>
             </Link>
           </div>
 

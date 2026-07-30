@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,6 +10,7 @@ interface NavSubDropdownProps {
 
 const NavSubDropdown: React.FC<NavSubDropdownProps> = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
+    const menuId = useId();
 
     return (
         <div
@@ -17,16 +18,24 @@ const NavSubDropdown: React.FC<NavSubDropdownProps> = ({ item }) => {
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
         >
-            <div className="flex items-center justify-between gap-4">
+            <button
+                type="button"
+                aria-expanded={isOpen}
+                aria-controls={menuId}
+                onClick={() => setIsOpen((open) => !open)}
+                onFocus={() => setIsOpen(true)}
+                className="flex items-center justify-between gap-4 w-full"
+            >
                 <span className="text-sm font-medium text-gray-700 group-hover/sub:text-[#3b30ad] transition-colors whitespace-nowrap">
                     {item.title}
                 </span>
                 <ChevronRight className={`w-4 h-4 text-gray-400 group-hover/sub:text-[#3b30ad] transition-transform ${isOpen ? 'rotate-0' : ''}`} />
-            </div>
+            </button>
 
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
+                        id={menuId}
                         initial={{ opacity: 0, x: 10 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 10 }}

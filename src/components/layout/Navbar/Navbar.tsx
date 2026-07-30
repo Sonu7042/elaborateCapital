@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useId, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -17,6 +17,7 @@ const MobileNavItemComponent: React.FC<{
   onClose: () => void;
 }> = ({ item, depth = 0, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const submenuId = useId();
   const hasItems = item.items && item.items.length > 0;
 
   return (
@@ -26,8 +27,11 @@ const MobileNavItemComponent: React.FC<{
       onMouseLeave={() => hasItems && setIsOpen(false)}
     >
       {hasItems ? (
-        <div
+        <button
+          type="button"
           onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls={submenuId}
           className={`flex items-center justify-between px-3 py-3 rounded-xl transition-all duration-200 cursor-pointer ${depth === 0
               ? "text-base font-bold text-gray-900"
               : "text-sm font-medium text-gray-600"
@@ -37,7 +41,7 @@ const MobileNavItemComponent: React.FC<{
           <ChevronDown
             className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180 text-[#3b30ad]" : "text-gray-400"}`}
           />
-        </div>
+        </button>
       ) : (
         <Link
           to={item.href || "#"}
@@ -54,6 +58,7 @@ const MobileNavItemComponent: React.FC<{
       <AnimatePresence>
         {hasItems && isOpen && (
           <motion.div
+            id={submenuId}
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -94,6 +99,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const location = useLocation();
 
   // Close mobile menu when route changes
@@ -139,12 +145,24 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
           <div className="hidden lg:flex items-center gap-6">
             <SearchBar />
             <div className="relative group">
-              <button className="bg-[#3b334a] hover:bg-[#2d2639] text-white px-8 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 active:scale-95">
+              <button
+                type="button"
+                aria-expanded={isLoginOpen}
+                aria-controls="desktop-login-menu"
+                onClick={() => setIsLoginOpen((open) => !open)}
+                onFocus={() => setIsLoginOpen(true)}
+                className="bg-[#3b334a] hover:bg-[#2d2639] text-white px-8 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 active:scale-95"
+              >
                 Login
               </button>
 
               {/* Login Dropdown */}
-              <div className="absolute z-50 top-full right-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div
+                id="desktop-login-menu"
+                className={`absolute z-50 top-full right-0 pt-2 transition-all duration-200 ${isLoginOpen ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"}`}
+                onMouseEnter={() => setIsLoginOpen(true)}
+                onMouseLeave={() => setIsLoginOpen(false)}
+              >
                 <div className="bg-white rounded-xl border border-gray-100 py-2 min-w-40 shadow-xl">
                   {loginNav.items?.map((item, index) => (
                     <Link
@@ -170,6 +188,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation-menu"
               className="inline-flex items-center justify-center p-2 rounded-xl text-gray-700 hover:text-[#3b30ad] hover:bg-gray-100 focus:outline-none transition-all duration-200"
             >
               {isMobileMenuOpen ? (
@@ -186,6 +205,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-navigation-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}

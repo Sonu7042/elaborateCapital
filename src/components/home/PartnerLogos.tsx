@@ -25,9 +25,14 @@ import pgim from '../../assets/HeroImages/partners/pgim-mf.webp';
 import uti from '../../assets/HeroImages/partners/uti.webp';
 
 const partners = [
-    franklin, navi, axis, bandhan, boi, birla, bnp, canara, dsp, edelweiss,
-    hdfc, hsbc, idbi, invesco, iti, kotak, lic, mirae, motilal, nippon,
-    nj, pgim, uti
+    [franklin, 'Franklin Templeton'], [navi, 'Navi Mutual Fund'], [axis, 'Axis Mutual Fund'],
+    [bandhan, 'Bandhan Mutual Fund'], [boi, 'Bank of India Mutual Fund'], [birla, 'Aditya Birla Sun Life Mutual Fund'],
+    [bnp, 'BNP Paribas'], [canara, 'Canara Robeco Mutual Fund'], [dsp, 'DSP Mutual Fund'],
+    [edelweiss, 'Edelweiss Mutual Fund'], [hdfc, 'HDFC Mutual Fund'], [hsbc, 'HSBC Mutual Fund'],
+    [idbi, 'IDBI Mutual Fund'], [invesco, 'Invesco Mutual Fund'], [iti, 'ITI Mutual Fund'],
+    [kotak, 'Kotak Mutual Fund'], [lic, 'LIC Mutual Fund'], [mirae, 'Mirae Asset Mutual Fund'],
+    [motilal, 'Motilal Oswal Mutual Fund'], [nippon, 'Nippon India Mutual Fund'],
+    [nj, 'NJ Mutual Fund'], [pgim, 'PGIM India Mutual Fund'], [uti, 'UTI Mutual Fund']
 ];
 
 const PartnerLogos: React.FC = () => {
@@ -45,18 +50,22 @@ const PartnerLogos: React.FC = () => {
                     className="flex gap-12 w-max animate-scroll hover:[animation-play-state:paused] py-4"
                 >
                     {/* logos double to support seamless loop */}
-                    {[...partners, ...partners].map((logo, index) => (
+                    {[...partners, ...partners].map(([logo, name], index) => {
+                      const duplicate = index >= partners.length;
+                      return (
                         <div
                             key={index}
                             className="w-32 h-16 sm:w-40 sm:h-20 flex items-center justify-center transition-all duration-500 pointer-events-none select-none"
                         >
                             <img
                                 src={logo}
-                                alt={`Partner ${index}`}
+                                alt={duplicate ? "" : name}
+                                aria-hidden={duplicate}
                                 className="max-w-full max-h-full object-contain"
                             />
                         </div>
-                    ))}
+                      );
+                    })}
                 </motion.div>
 
                 {/* Gradient Fades for a premium look */}

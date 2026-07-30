@@ -32,7 +32,7 @@ const Footer = () => {
             <Link to="/">
               <img
                 src={logo}
-                alt="Elaborate Capital Logo"
+                alt="Elaborate Capital"
                 className="h-32 md:h-40 w-auto object-contain -ml-4"
               />
             </Link>
@@ -304,13 +304,13 @@ const Footer = () => {
           </p>
           <div className="flex gap-6">
             <Link
-              to="#"
+              to="/disclosure"
               className="hover:text-[#99C336] transition-colors"
             >
               Disclosure
             </Link>
             <Link
-              to="#"
+              to="/privacy-policy"
               className="hover:text-[#99C336] transition-colors"
             >
               Privacy Policy
