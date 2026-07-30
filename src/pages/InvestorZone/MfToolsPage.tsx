@@ -101,16 +101,16 @@ const MfToolsPage = () => {
                                     <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-4">
                                         <img
                                             src={tool.img}
-                                            alt={tool.name}
+                                            alt=""
                                             className="w-full h-full object-contain"
                                         />
                                     </div>
                                 </div>
 
                                 {/* Label */}
-                                <h3 className="mt-8 text-base font-bold text-gray-800 text-center uppercase tracking-tight">
+                                <h2 className="mt-8 text-base font-bold text-gray-800 text-center uppercase tracking-tight">
                                     {tool.name}
-                                </h3>
+                                </h2>
                             </Link>
                         </motion.div>
                     ))}
