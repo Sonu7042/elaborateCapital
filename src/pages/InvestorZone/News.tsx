@@ -71,6 +71,8 @@ export default function StockNews({ limit }: StockNewsProps) {
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
+      <h1 className="sr-only">Latest Market News</h1>
+
       {/* Controls Bar */}
       <div className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">
@@ -82,6 +84,7 @@ export default function StockNews({ limit }: StockNewsProps) {
               {/* Mobile Dropdown */}
               <div className="md:hidden w-full relative">
                 <select
+                  aria-label="Filter news by category"
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
                   className="w-full h-11 px-4 pr-10 bg-gray-100 border-none rounded-xl text-sm font-semibold text-gray-800 appearance-none focus:ring-2 focus:ring-[#99C336] outline-none"
@@ -121,6 +124,7 @@ export default function StockNews({ limit }: StockNewsProps) {
 
               <input
                 type="text"
+                aria-label="Search news headlines"
                 placeholder="Search headlines..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
@@ -164,7 +168,7 @@ export default function StockNews({ limit }: StockNewsProps) {
                   {item.image && (
                     <img
                       src={item.image}
-                      alt={item.title}
+                      alt=""
                       className="w-full h-52 object-cover rounded-2xl mb-5"
                     />
                   )}
@@ -175,18 +179,22 @@ export default function StockNews({ limit }: StockNewsProps) {
                       {item.source}
                     </span>
 
-                    <button className="p-2 hover:bg-gray-100 rounded-full text-gray-400 transition-colors">
+                    <button
+                      type="button"
+                      aria-label={`Share article: ${item.title}`}
+                      className="p-2 hover:bg-gray-100 rounded-full text-gray-600 transition-colors"
+                    >
                       <Share2 size={16} />
                     </button>
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-bold text-gray-900 text-xl leading-tight group-hover:text-[#99C336] transition-colors mb-4 line-clamp-3">
+                  <h2 className="font-bold text-gray-900 text-xl leading-tight group-hover:text-[#587A00] transition-colors mb-4 line-clamp-3">
                     {item.title}
-                  </h3>
+                  </h2>
 
                   {/* Summary */}
-                  <p className="text-sm text-gray-500 line-clamp-3 mb-6">
+                  <p className="text-sm text-gray-700 line-clamp-3 mb-6">
                     {item.summary}
                   </p>
 
