@@ -105,7 +105,7 @@ export default function HomeNewsSection() {
                       type="button"
                       onClick={handleRefresh}
                       aria-label="Refresh live news"
-                      className={`text-[#99C336] hover:text-[#bef264] transition-all transform ${refreshing ? "animate-spin" : "hover:rotate-180"}`}
+                      className={`text-[#B8E650] hover:text-[#d2f58a] transition-all transform ${refreshing ? "animate-spin" : "hover:rotate-180"}`}
                     >
                       <RefreshCw size={24} />
                     </button>
@@ -113,7 +113,7 @@ export default function HomeNewsSection() {
                 </div>
                 <Link
                   to="/news"
-                  className="text-white/60 hover:text-white transition-colors text-sm font-medium flex items-center gap-1 group/link"
+                  className="text-white hover:text-white transition-colors text-sm font-medium flex items-center gap-1 group/link"
                 >
                   View All
                   <ArrowUpRight

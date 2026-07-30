@@ -14,7 +14,7 @@ const SchemePerformance = () => {
             {/* <div className="w-1 h-6 rounded-full" style={{ background: 'linear-gradient(#7b0020, #99C336)' }} /> */}
             {/* <h2 className="text-lg font-bold text-gray-800">Scheme Performance</h2> */}
             <h2 className="text-3xl md:text-4xl heading font-semibold text-gray-800 leading-snug">
-              Top <span className="text-[#99C336]"> Performing </span>Schemes
+              Top <span className="text-[#587A00]"> Performing </span>Schemes
             </h2>
           </div>
 

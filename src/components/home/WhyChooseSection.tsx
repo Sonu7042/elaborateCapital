@@ -21,7 +21,7 @@ const WhyChooseSection: React.FC = () => {
             >
               <h2 className="heading font-bold text-3xl md:text-[42px] leading-tight text-[#0D3052] mb-2">
                 {/* Trusted Financial Expertise for <span className="text-[#99C336] italic"> Long-Term </span> Growth */}
-                Smart Financial Strategies for Secure Wealth Growth  <span className="text-[#99C336] italic"> Why </span> 
+                Smart Financial Strategies for Secure Wealth Growth  <span className="text-[#587A00] italic"> Why </span> 
               </h2>
               <p className="para text-gray-600 text-lg md:text-base max-w-xl mb-6 leading-relaxed">
                 At Elaborate Capital, we combine smart financial planning with personalized wealth strategies to deliver secure, sustainable growth through trusted, transparent, and expert-driven guidance.
@@ -40,7 +40,7 @@ const WhyChooseSection: React.FC = () => {
                   <h3 className="heading font-bold text-gray-900 text-lg mb-3">
                     Research  Driven Investment Strategies
                   </h3>
-                  <p className="para text-gray-500 text-sm leading-relaxed">
+                  <p className="para text-gray-700 text-sm leading-relaxed">
                     Built on market research, data-driven insights, and financial analysis for smarter investment decisions.
                   </p>
                 </motion.div>
@@ -56,7 +56,7 @@ const WhyChooseSection: React.FC = () => {
                   <h3 className="heading font-bold text-gray-900 text-lg mb-1.5">
                     Personalized Wealth Planning
                   </h3>
-                  <p className="para text-gray-500 text-sm leading-relaxed">
+                  <p className="para text-gray-700 text-sm leading-relaxed">
                     Personalized financial solutions aligned with your goals and long-term wealth plans.
                   </p>
                 </motion.div>
@@ -72,7 +72,7 @@ const WhyChooseSection: React.FC = () => {
                   <h3 className="heading font-bold text-gray-900 text-lg mb-3">
                     Secure & Transparent Investing
                   </h3>
-                  <p className="para text-gray-500 text-sm leading-relaxed">
+                  <p className="para text-gray-700 text-sm leading-relaxed">
                     Focused on transparency, discipline, and secure investing for long-term growth.
                   </p>
                 </motion.div>
@@ -88,7 +88,7 @@ const WhyChooseSection: React.FC = () => {
                   <h3 className="heading font-bold text-gray-900 text-lg mb-3">
                     Experienced Financial Guidance
                   </h3>
-                  <p className="para text-gray-500 text-sm leading-relaxed">
+                  <p className="para text-gray-700 text-sm leading-relaxed">
                     Expert financial guidance and market insights for confident decision-making.
                   </p>
                 </motion.div>
@@ -98,7 +98,7 @@ const WhyChooseSection: React.FC = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#99C336] hover:bg-[#B0DD45] text-white heading font-semibold px-10 py-3.5 rounded-lg shadow-lg shadow-[#99C336]/20 transition-all"
+                className="bg-[#99C336] hover:bg-[#B0DD45] text-black heading font-semibold px-10 py-3.5 rounded-lg shadow-lg shadow-[#99C336]/20 transition-all"
               >
                 Explore Investment Solutions
               </motion.button>

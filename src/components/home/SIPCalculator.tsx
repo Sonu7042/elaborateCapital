@@ -31,7 +31,7 @@ const Slider = ({
   return (
     <div className="mb-6">
       <div className="flex justify-between items-center mb-3">
-        <label className="text-[12px] font-bold text-gray-400 font-primary uppercase tracking-wider">
+        <label className="text-[12px] font-bold text-gray-600 font-primary uppercase tracking-wider">
           {label}
         </label>
         <div className="flex items-center gap-1 bg-white px-3 py-1 rounded-xl border border-gray-100 shadow-sm focus-within:border-[#99C336] transition-all">
@@ -46,7 +46,7 @@ const Slider = ({
             }}
             className="w-16 text-right text-lg font-bold text-[#0a2540] font-heading bg-transparent outline-none"
           />
-          <span className="text-[10px] font-semibold text-gray-400 font-primary">
+          <span className="text-[10px] font-semibold text-gray-600 font-primary">
             {suffix}
           </span>
         </div>
@@ -143,7 +143,7 @@ const OutputSection = ({
             })}
           </svg>
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">
+            <span className="text-[9px] font-bold text-gray-600 uppercase tracking-widest">
               Returns
             </span>
             <div className="flex items-center">
@@ -173,7 +173,7 @@ const OutputSection = ({
                 style={{ backgroundColor: item.color }}
               ></div>
               <div className="text-left">
-                <p className="text-gray-400 text-[10px] font-bold uppercase tracking-wider font-primary">
+                <p className="text-gray-600 text-[10px] font-bold uppercase tracking-wider font-primary">
                   {item.label}
                 </p>
                 <p className="text-xl font-bold text-[#0a2540] font-heading">
@@ -185,11 +185,11 @@ const OutputSection = ({
         </div>
       </div>
 
-      <button className="w-full max-w-sm py-4 bg-[#99C336] text-white rounded-xl font-bold uppercase tracking-[0.15em] text-[13px] hover:bg-[#86ac2f] transition-all shadow-lg shadow-green-500/10 active:scale-95">
+      <button className="w-full max-w-sm py-4 bg-[#99C336] text-black rounded-xl font-bold uppercase tracking-[0.15em] text-[13px] hover:bg-[#86ac2f] transition-all shadow-lg shadow-green-500/10 active:scale-95">
         INVEST NOW
       </button>
       {note && (
-        <p className="mt-6 text-[10px] text-gray-400 italic text-center max-w-xs">
+        <p className="mt-6 text-[10px] text-gray-600 italic text-center max-w-xs">
           {note}
         </p>
       )}
@@ -215,14 +215,14 @@ const CalculatorWrapper = ({
       {/* Left Column: Inputs */}
       <div className="flex-1 p-8 lg:p-10 bg-[#fafbfc]">
         <div className="flex items-center gap-3 mb-10">
-          <div className="w-9 h-9 bg-white rounded-lg shadow-sm flex items-center justify-center text-[#99C336] border border-gray-100">
+          <div className="w-9 h-9 bg-white rounded-lg shadow-sm flex items-center justify-center text-[#587A00] border border-gray-100">
             {icon}
           </div>
           <div>
             <h3 className="text-[16px] font-bold text-[#0a2540] font-heading">
               {title}
             </h3>
-            <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider font-primary">
+            <p className="text-[10px] font-bold text-gray-600 uppercase tracking-wider font-primary">
               {desc}
             </p>
           </div>
@@ -268,7 +268,7 @@ const SIPCalc = () => {
       inputs={
         <>
           <div className="relative group max-w-xs mx-auto">
-            <div className="absolute -top-2 left-5 px-2 bg-[#fafbfc] text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] z-10">
+            <div className="absolute -top-2 left-5 px-2 bg-[#fafbfc] text-[9px] font-bold text-gray-600 uppercase tracking-[0.2em] z-10">
               Enter Amount
             </div>
             <div className="flex items-center justify-center gap-2 p-4 bg-white border-2 border-[#99C336]/10 rounded-[16px] transition-all group-focus-within:border-[#99C336]">
@@ -348,7 +348,7 @@ const LumpsumCalc = () => {
       inputs={
         <>
           <div className="relative group max-w-xs mx-auto">
-            <div className="absolute -top-2 left-5 px-2 bg-[#fafbfc] text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] z-10">
+            <div className="absolute -top-2 left-5 px-2 bg-[#fafbfc] text-[9px] font-bold text-gray-600 uppercase tracking-[0.2em] z-10">
               Enter Amount
             </div>
             <div className="flex items-center justify-center gap-2 p-4 bg-white border-2 border-[#99C336]/10 rounded-[16px] transition-all group-focus-within:border-[#99C336]">
@@ -526,7 +526,7 @@ const GoalCalc = () => {
       inputs={
         <>
           <div className="relative group max-w-xs mx-auto">
-            <div className="absolute -top-2 left-5 px-2 bg-[#fafbfc] text-[9px] font-bold text-gray-400 uppercase tracking-[0.2em] z-10">
+            <div className="absolute -top-2 left-5 px-2 bg-[#fafbfc] text-[9px] font-bold text-gray-600 uppercase tracking-[0.2em] z-10">
               Target Amount
             </div>
             <div className="flex items-center justify-center gap-2 p-4 bg-white border-2 border-[#99C336]/10 rounded-[16px] transition-all group-focus-within:border-[#99C336]">
@@ -769,8 +769,8 @@ export default function CalculatorsSection() {
               aria-selected={activeTab === tab.key}
               className={`pb-4 text-[12px] font-bold tracking-widest uppercase transition-all relative font-primary ${
                 activeTab === tab.key
-                  ? "text-[#99C336]"
-                  : "text-gray-300 hover:text-gray-500"
+                  ? "text-[#587A00]"
+                  : "text-gray-600 hover:text-gray-700"
               }`}
             >
               {tab.label}
@@ -804,3 +804,4 @@ export default function CalculatorsSection() {
     </section>
   );
 }
+

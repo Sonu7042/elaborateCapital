@@ -127,7 +127,7 @@ const AutoCarousel: React.FC = () => {
               onClick={() => setCurrent(index)}
               aria-label={`Show slide ${index + 1}: ${slide.title}`}
               aria-pressed={current === index}
-              className={`w-3 h-3 rounded-full transition-all ${current === index ? "bg-[#99C336] w-6" : "bg-gray-300"
+              className={`min-w-6 min-h-6 rounded-full transition-all relative after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:h-3 after:rounded-full ${current === index ? "after:bg-[#99C336] after:w-6" : "after:bg-gray-500 after:w-3"
                 }`}
             />
           ))}

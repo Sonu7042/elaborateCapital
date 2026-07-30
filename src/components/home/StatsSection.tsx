@@ -30,7 +30,7 @@ const StatItem = ({
 
   return (
     <div ref={ref} className="text-center">
-      <div className="text-4xl md:text-5xl font-bold text-[#99C336] mb-2 flex items-center justify-center">
+      <div className="text-4xl md:text-5xl font-bold text-[#587A00] mb-2 flex items-center justify-center">
         <motion.span style={{ display: "inline-block" }}>
           {displayValue}
         </motion.span>

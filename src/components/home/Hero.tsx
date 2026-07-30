@@ -25,7 +25,7 @@ const Hero = () => {
         >
           {/* Your Trusted Path to Prosperity, Smart Investing & Lasting Wealth */}
           Building Wealth Through{" "}
-          <span className="text-[#99C336] italic ">Smart Investments</span> &
+          <span className="text-[#587A00] italic ">Smart Investments</span> &
           Trusted Financial Solutions
         </motion.h1>
 

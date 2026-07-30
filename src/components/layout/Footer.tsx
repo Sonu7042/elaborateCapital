@@ -282,7 +282,7 @@ const Footer = () => {
         {showDisclaimer && (
           <div className="pb-10 animate-in fade-in slide-in-from-top-4 duration-500">
             <div className="p-6   ">
-              <p className="text-[12px] md:text-[13px] leading-relaxed text-white/60 text-justify">
+              <p className="text-[12px] md:text-[13px] leading-relaxed text-white text-justify">
                 Investment in the securities market are subject to market risks.
                 Read all the related documents carefully before investing.
                 Elaborate Capital  Investment Services Private Limited and its associates
@@ -297,7 +297,7 @@ const Footer = () => {
         )}
 
         {/* Copyright Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-6 text-[13px] text-white/60 border-t border-white/10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 py-6 text-[13px] text-white border-t border-white/10">
           <p>
             Copyright © {currentYear} Elaborate Capital  Investment Services Private
             Limited. All rights reserved.

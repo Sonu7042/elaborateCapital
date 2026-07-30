@@ -108,14 +108,14 @@ const ServiceCard = ({
       className="flex flex-col  gap-3 p-5 rounded-lg border border-[#e8e8e8]  text-[#090909] transition-all duration-300 group h-full cursor-pointer shadow-[6px_6px_12px_#c5c5c5,-6px_-6px_12px_#F2F7EE] hover:border-white active:shadow-[4px_4px_12px_#c5c5c5,-4px_-4px_12px_#ffffff]"
     >
       <div
-        className="text-gray-400 group-hover:text-gray-600 transition-colors duration-300"
+        className="text-gray-600 transition-colors duration-300"
         dangerouslySetInnerHTML={{ __html: service.icon }}
       />
       <div>
         <h3 className="font-semibold heading text-gray-900 text-sm md:text-base mb-1 group-hover:text-[#99C336] transition-colors duration-300">
           {service.title}
         </h3>
-        <p className="text-gray-400 para text-xs leading-relaxed line-clamp-1">
+        <p className="text-gray-600 para text-xs leading-relaxed line-clamp-1">
           {service.description}
         </p>
       </div>
