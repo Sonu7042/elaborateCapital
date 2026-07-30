@@ -106,7 +106,7 @@ const BlogPage = () => {
               onClick={() =>
                 setVisibleCount((c) => Math.min(c + 8, blogPosts.length))
               }
-              className="bg-[#99C336] hover:bg-[#8fd12a] text-white font-bold px-12 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md active:scale-95 text-sm"
+              className="bg-[#99C336] hover:bg-[#8fd12a] text-black font-bold px-12 py-3.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md active:scale-95 text-sm"
             >
               Load More
             </button>
