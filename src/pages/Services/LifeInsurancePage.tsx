@@ -21,7 +21,7 @@ const services = [
     title: "Life Insurance",
     desc: "Financial security for your loved ones future.",
     bg: "bg-emerald-50",
-    color: "text-[#99C336]",
+    color: "text-[#587A00]",
   },
   {
     icon: <HeartPulse size={32} />,
@@ -98,7 +98,7 @@ const InsurancePage = () => {
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-slate-900 mt-6">
               Protect What Matters,
-              <span className="text-[#99C336] block">Secure Your Future.</span>
+              <span className="text-[#587A00] block">Secure Your Future.</span>
             </h1>
 
             <p className="text-gray-600 text-lg leading-8 mt-6 max-w-xl">
@@ -110,7 +110,7 @@ const InsurancePage = () => {
             <div className="flex flex-wrap gap-4 mt-8">
               {/* Call Button */}
               <Link to="/contact">
-                <button className="px-7 py-4 rounded-full bg-[#99C336] hover:bg-emerald-700 text-white font-semibold flex items-center gap-2 transition-all duration-300">
+                <button className="px-7 py-4 rounded-full bg-[#99C336] hover:bg-emerald-700 text-black font-semibold flex items-center gap-2 transition-all duration-300">
                   Contact Expert
                   <ArrowRight size={18} />
                 </button>
@@ -133,7 +133,7 @@ const InsurancePage = () => {
                 "100% Secure & Transparent",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <ShieldCheck className="text-[#99C336] mt-1" size={22} />
+                  <ShieldCheck className="text-[#587A00] mt-1" size={22} />
                   <p className="text-sm text-gray-700 font-medium leading-6">
                     {item}
                   </p>
@@ -203,7 +203,7 @@ const InsurancePage = () => {
       <section className="px-4 lg:px-10 pb-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <p className="text-[#99C336] font-semibold uppercase tracking-widest">
+            <p className="text-[#587A00] font-semibold uppercase tracking-widest">
               OUR INSURANCE SOLUTIONS
             </p>
 
@@ -230,7 +230,7 @@ const InsurancePage = () => {
 
                 <p className="text-gray-500 leading-7 mt-4">{item.desc}</p>
 
-                <button className="flex items-center gap-2 text-[#99C336] font-semibold mt-8">
+                <button className="flex items-center gap-2 text-[#587A00] font-semibold mt-8">
                   Explore Plans
                   <ArrowRight size={18} />
                 </button>
@@ -245,20 +245,20 @@ const InsurancePage = () => {
         <div className="max-w-7xl mx-auto bg-gradient-to-r from-emerald-50 to-white rounded-[40px] overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             <div className="p-10 lg:p-16">
-              <p className="text-slate-700 text-2xl font-medium">
+              <h2 className="text-slate-700 text-2xl font-medium">
                 Why Wait for Uncertainty?
-              </p>
-
-              <h2 className="text-5xl font-bold text-emerald-700 leading-tight mt-5">
-                Be Prepared, Not Scared.
               </h2>
+
+              <h3 className="text-5xl font-bold text-emerald-700 leading-tight mt-5">
+                Be Prepared, Not Scared.
+              </h3>
 
               <p className="text-gray-600 leading-8 mt-6 max-w-lg">
                 A small step today can secure your family’s happiness tomorrow.
                 Let us help you choose the right plan.
               </p>
 <Link to="https://wa.me/919990105522" target="_blank" >
-              <button className="mt-10 px-8 py-4 rounded-full bg-[#99C336] text-white font-semibold flex items-center gap-2 hover:bg-emerald-700 transition-all duration-300">
+              <button className="mt-10 px-8 py-4 rounded-full bg-[#99C336] text-black font-semibold flex items-center gap-2 hover:bg-emerald-700 transition-all duration-300">
                 Get a Free Consultation
                 <ArrowRight size={18} />
               </button>
@@ -282,7 +282,7 @@ const InsurancePage = () => {
           {/* LEFT */}
           <div>
             <div className="text-center lg:text-left">
-              <p className="text-[#99C336] uppercase tracking-widest font-semibold">
+              <p className="text-[#587A00] uppercase tracking-widest font-semibold">
                 OUR PROMISE
               </p>
 
@@ -294,7 +294,7 @@ const InsurancePage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
               {steps.map((item, index) => (
                 <div key={index} className="text-center lg:text-left">
-                  <div className="w-20 h-20 rounded-full bg-emerald-50 text-[#99C336] flex items-center justify-center mx-auto lg:mx-0">
+                  <div className="w-20 h-20 rounded-full bg-emerald-50 text-[#587A00] flex items-center justify-center mx-auto lg:mx-0">
                     {item.icon}
                   </div>
 
@@ -309,7 +309,7 @@ const InsurancePage = () => {
           </div>
 
           {/* HELP CARD */}
-          <div className="bg-[#99C336] rounded-[40px] p-10 text-white">
+          <div className="bg-[#99C336] rounded-[40px] p-10 text-black">
             <div className="w-20 h-20 rounded-full bg-white/20 flex items-center justify-center">
               <Phone size={34} />
             </div>
@@ -318,7 +318,7 @@ const InsurancePage = () => {
               Need Help? We’re Here!
             </h3>
 
-            <p className="text-emerald-50 leading-8 mt-5">
+            <p className="text-black leading-8 mt-5">
               Talk to our insurance experts anytime.
             </p>
 
