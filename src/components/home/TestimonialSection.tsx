@@ -73,9 +73,9 @@ const TestimonialSection: React.FC = () => {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <h4 className="font-semibold text-gray-800 text-sm">
+                    <h3 className="font-semibold text-gray-800 text-sm">
                       {item.name}
-                    </h4>
+                    </h3>
                     <p className="text-[11px] text-gray-500">{item.role}</p>
                   </div>
                 </div>
