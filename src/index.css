@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Amarna:wght@400;700&family=League+Spartan:wght@100..900&family=Tenor+Sans&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-albert: "Albert Sans", sans-serif;
+  --font-spartan: "League Spartan", sans-serif;
+  --font-headline: "Amarna", serif;
+  --font-body: "Alef", sans-serif;
+  --font-primary: "Alef", sans-serif;
+  --font-heading: "Amarna", serif;
+  --font-alef: "Alef", sans-serif;
+}
+
+:root {
+  font-family: var(--font-body) !important;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  font-family: var(--font-heading) !important;
+  font-weight: 700;
+}
+
+p, .para {
+  font-family: var(--font-primary) !important;
+  font-weight: 400;
+  /* font-size: 20px !important; */
+}
+ul , li  {
+  font-family: var(--font-primary) !important;
+  font-weight: 400;
+}
+
+button {
+  font-family: var(--font-primary) !important;
+}
+
+/* Accessibility High Contrast Mode */
+body.high-contrast-mode {
+  filter: invert(1) hue-rotate(180deg) contrast(1.2);
+  background-color: #111;
+  color: #fff;
+}
+
+body.high-contrast-mode img,
+body.high-contrast-mode video,
+body.high-contrast-mode .no-invert {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
