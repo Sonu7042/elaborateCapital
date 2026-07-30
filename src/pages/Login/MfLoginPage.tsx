@@ -53,9 +53,10 @@ const MfLoginPage = () => {
                     {/* Login Form */}
                     <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="relative">
-                            <label className="text-xs font-semibold text-red-500 mb-1 block">Username</label>
+                            <label htmlFor="login-username" className="text-xs font-semibold text-red-500 mb-1 block">Username</label>
                             <div className="relative border-b border-red-500 pb-1">
                                 <input
+                                    id="login-username"
                                     type="text"
                                     placeholder="Required"
                                     className="w-full bg-transparent outline-none text-sm py-1 placeholder:text-gray-300"
@@ -69,6 +70,8 @@ const MfLoginPage = () => {
                         <div className="relative">
                             <div className="flex items-center justify-between border-b border-gray-200 pb-1">
                                 <input
+                                    id="login-password"
+                                    aria-label="Password"
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Password"
                                     className="w-full bg-transparent outline-none text-sm py-1 placeholder:text-gray-300"
@@ -91,8 +94,9 @@ const MfLoginPage = () => {
                                 <div className={`w-4 h-4 rounded border flex items-center justify-center transition-all ${formData.rememberMe ? 'bg-[#00c9a7] border-[#00c9a7]' : 'border-gray-300'}`}>
                                     {formData.rememberMe && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
                                     <input
+                                        aria-label="Remember me"
                                         type="checkbox"
-                                        className="hidden"
+                                        className="sr-only"
                                         checked={formData.rememberMe}
                                         onChange={() => setFormData({ ...formData, rememberMe: !formData.rememberMe })}
                                     />

@@ -44,7 +44,9 @@ const ScheduleMeetingPage = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6 max-w-lg">
               <div className="relative group">
+                <label htmlFor="meeting-name" className="sr-only">Name</label>
                 <input
+                  id="meeting-name"
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -55,7 +57,9 @@ const ScheduleMeetingPage = () => {
                 />
               </div>
               <div>
+                <label htmlFor="meeting-email" className="sr-only">Email address</label>
                 <input
+                  id="meeting-email"
                   type="email"
                   name="email"
                   placeholder="Email"
@@ -66,7 +70,9 @@ const ScheduleMeetingPage = () => {
                 />
               </div>
               <div>
+                <label htmlFor="meeting-phone" className="sr-only">Phone number</label>
                 <input
+                  id="meeting-phone"
                   type="tel"
                   name="phone"
                   placeholder="Phone"
@@ -77,7 +83,9 @@ const ScheduleMeetingPage = () => {
                 />
               </div>
               <div>
+                <label htmlFor="meeting-date" className="sr-only">Preferred meeting date</label>
                 <input
+                  id="meeting-date"
                   type="text"
                   onFocus={(e) => (e.target.type = "date")}
                   onBlur={(e) => {
@@ -92,7 +100,9 @@ const ScheduleMeetingPage = () => {
                 />
               </div>
               <div>
+                <label htmlFor="meeting-time" className="sr-only">Preferred meeting time</label>
                 <input
+                  id="meeting-time"
                   type="text"
                   onFocus={(e) => (e.target.type = "time")}
                   onBlur={(e) => {

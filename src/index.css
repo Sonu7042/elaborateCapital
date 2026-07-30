@@ -43,6 +43,43 @@ button {
   font-family: var(--font-primary) !important;
 }
 
+::placeholder {
+  color: #6b7280 !important;
+  opacity: 1;
+}
+
+/* Consistent keyboard indication without affecting pointer interaction or layout. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 3px solid #7b0020 !important;
+  outline-offset: 3px !important;
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 0;
+  z-index: 9999;
+  transform: translateY(-150%);
+  padding: .75rem 1rem;
+  border-radius: 0 0 .5rem .5rem;
+  background: #fff;
+  color: #111827;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
 /* Accessibility High Contrast Mode */
 body.high-contrast-mode {
   filter: invert(1) hue-rotate(180deg) contrast(1.2);

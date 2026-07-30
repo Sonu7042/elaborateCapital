@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar/Navbar'
 import StockTicker from '../components/layout/Navbar/StockTicker'
 import { Outlet, useLocation } from 'react-router-dom'
 import Footer from '../components/layout/Footer'
+import RouteAccessibility from '../components/layout/RouteAccessibility'
 // import AccessibilityBar from '../components/layout/AccessibilityBar'
 
 export const RootLayout = () => {
@@ -22,11 +23,13 @@ export const RootLayout = () => {
     // Global Scroll Restoration (Scroll to top on route change)
     useEffect(() => {
         window.scrollTo(0, 0);
+        document.getElementById('main-content')?.focus({ preventScroll: true });
     }, [location.pathname]);
 
 
     return (
         <div className="min-h-screen ">
+            <a href="#main-content" className="skip-link">Skip to main content</a>
             <header
                 className={`fixed top-0 left-0 right-0 z-100 transition-all duration-300 border-b border-gray-100/50 ${isScrolled
                     ? 'bg-white/95 backdrop-blur-md shadow-sm'
@@ -54,6 +57,7 @@ export const RootLayout = () => {
 
             {/* Page Content */}
             <main id="main-content" className="pt-20 pb-8" tabIndex={-1}>
+                <RouteAccessibility />
                 <Outlet />
             </main>
             <Footer />

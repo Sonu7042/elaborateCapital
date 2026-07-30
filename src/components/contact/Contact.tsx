@@ -48,7 +48,9 @@ const Contact = () => {
               className="flex flex-col gap-[28px] h-auto md:h-[449px] justify-center"
             >
               <div className="relative">
+                <label htmlFor="contact-name" className="sr-only">Name</label>
                 <input
+                  id="contact-name"
                   type="text"
                   name="name"
                   placeholder="Name"
@@ -60,7 +62,9 @@ const Contact = () => {
               </div>
 
               <div className="relative">
+                <label htmlFor="contact-phone" className="sr-only">Phone number</label>
                 <input
+                  id="contact-phone"
                   type="tel"
                   name="phone"
                   placeholder="Phone Number"
@@ -74,7 +78,9 @@ const Contact = () => {
               </div>
 
               <div className="relative">
+                <label htmlFor="contact-email" className="sr-only">Email address</label>
                 <input
+                  id="contact-email"
                   type="email"
                   name="email"
                   placeholder="Email"
@@ -86,7 +92,9 @@ const Contact = () => {
               </div>
 
               <div className="relative">
+                <label htmlFor="contact-message" className="sr-only">Message</label>
                 <textarea
+                  id="contact-message"
                   name="message"
                   placeholder="Message"
                   value={formData.message}

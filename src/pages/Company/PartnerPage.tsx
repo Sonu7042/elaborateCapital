@@ -23,6 +23,7 @@ const FormField = ({
   onChange,
 }: FieldProps) => (
   <div className="flex flex-col gap-1">
+    <label htmlFor={id} className="sr-only">{label}</label>
     <input
       id={id}
       type={type}

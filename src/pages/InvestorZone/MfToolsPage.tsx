@@ -64,6 +64,7 @@ const MfToolsPage = () => {
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
                         <input 
                             type="text" 
+                            aria-label="Find a mutual fund tool"
                             placeholder="Find a tool..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}

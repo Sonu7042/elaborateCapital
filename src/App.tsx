@@ -1,11 +1,14 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RootLayout from './layouts/RootLayout';
 import * as Pages from './pages';
+import RouteErrorPage from './pages/RouteErrorPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout />,
+    errorElement: <RouteErrorPage />,
     children: [
       { index: true, element: <Pages.HomePage /> },
       { path: 'about', element: <Pages.AboutPage /> },
@@ -55,6 +58,7 @@ const router = createBrowserRouter([
       { path: 'downloads/kyc-fatca', element: <Pages.KycFatcaPage /> },
       // { path: 'https://bestmateinvestment.investwell.app/', element: <Pages.MfLoginPage /> },
       { path: 'login/equity', element: <Pages.EquityLoginPage /> },
+      { path: '*', element: <NotFoundPage /> },
     ],
   },
 ]);

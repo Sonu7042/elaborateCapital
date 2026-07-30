@@ -337,6 +337,7 @@ const CalculatorsPage = () => {
           />
           <input
             type="text"
+            aria-label="Search calculators"
             placeholder="Search calculators..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
