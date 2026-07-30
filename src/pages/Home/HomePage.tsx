@@ -20,13 +20,13 @@ const SIPCalculator = lazy(
 const WhyChooseSection = lazy(
   () => import("../../components/home/WhyChooseSection"),
 );
-const AutoCarousel = lazy(() => import("../../components/home/AutoCarousel"));
+const AutoCarousel = lazy(() => import("../../components/home/AutoCarousel"));  
 const SchemePerformance = lazy(
-  () => import("../InvestorZone/mftoolscalculator/SchemePerformance"),
+  () => import("../InvestorZone/mftoolscalculator/SchemePerformance"),                                 
 );
-const HomeNewsSection = lazy(
+const HomeNewsSection = lazy(                                                 
   () => import("../../components/home/HomeNewsSection"),
-);
+);    
 
 const HomePage = () => {
   return (
