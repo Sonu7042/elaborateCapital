@@ -30,7 +30,7 @@ const HomeNewsSection = lazy(
 
 const HomePage = () => {
   return (
-    <div id="main-content" tabIndex={-1} className="min-h-screen outline-none">
+    <div className="min-h-screen">
       <Hero />
       <StatsSection />
       <Suspense fallback={null}>
