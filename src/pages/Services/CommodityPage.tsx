@@ -99,18 +99,18 @@ const CommodityPage = () => {
             </ul>
 
             <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 mb-16 shadow-sm">
-              <p className="text-lg para text-gray-600 leading-relaxed">
+              <p className="text-lg para text-gray-700 leading-relaxed">
                   We are an Authorized Person of Edelweiss Broking Ltd., a member of MCX and NCDEX, enabling us to offer comprehensive commodity trading solutions including hedging, arbitrage, speculative trading, and investment-based strategies. Clients also benefit from direct market access connectivity along with complete execution and clearing services, ensuring efficient and transparent trading operations across commodity markets.
               </p>
               <br />
-              <p className="text-lg para text-gray-600 leading-relaxed">
+              <p className="text-lg para text-gray-700 leading-relaxed">
                   Access global bullion markets and participate in futures and derivative-based trading through a transparent execution process. Clients can request live pricing from our dealing desk for specific contract quantities. For rolling spot or forward contracts, positions can be maintained against a margin deposit. Financing and forward charges are linked to prevailing interest rates, and clients are advised to confirm current rates prior to trading for better cost planning and risk management.
               </p>
             </div>
 
-            <h3 className="text-2xl heading font-bold text-gray-900 mb-8 border-l-4 border-[#99C336] pl-4">
-                Access to MCX & Commodity Derivatives Products</h3>
-              <p className="text-lg para text-gray-600 leading-relaxed">
+            <h2 className="text-2xl heading font-bold text-gray-900 mb-8 border-l-4 border-[#99C336] pl-4">
+                Access to MCX & Commodity Derivatives Products</h2>
+              <p className="text-lg para text-gray-700 leading-relaxed">
                   We provide access to a wide range of MCX-listed metals and agricultural commodity derivatives, including Gold, Silver, Copper, Aluminium, Zinc, Lead, Nickel, Steel, Cotton, and other metal and agri-based contracts. This enables investors and traders to diversify their portfolio across multiple commodity segments and participate in both metals and agricultural markets through a single integrated platform.
               </p>
 
