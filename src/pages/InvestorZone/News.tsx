@@ -175,7 +175,7 @@ export default function StockNews({ limit }: StockNewsProps) {
 
                   {/* Top */}
                   <div className="flex items-center justify-between mb-4">
-                    <span className="bg-gray-100 text-gray-700 text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest border border-gray-200">
+                    <span className="bg-gray-100 text-black text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest border border-gray-200">
                       {item.source}
                     </span>
 
